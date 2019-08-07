@@ -1,0 +1,58 @@
+nav.navbar.navbar-inverse.navbar-fixed-top(role='navigation')
+    // Brand and toggle get grouped for better mobile display
+    .navbar-header.position-relative
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-ex1-collapse')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+        button.btn.btn-default.search-toggle(type='button')
+            span.glyphicon.glyphicon-search
+        a.navbar-brand.brand-logo(href='/' title='')
+            img.logo(src='/assets/images/nodejs_256x256.png')
+        if _auth.isAuth
+            form.navbar-form.navbar-right.nav-search(role='search')
+                .input-group
+                    input.form-control(type='text' name='q' placeholder='Search')
+                    span.input-group-btn
+                        button.btn.btn-primary(type='submit')
+                            span.glyphicon.glyphicon-search
+    // Collect the nav links, forms, and other content for toggling
+    .collapse.navbar-collapse.navbar-ex1-collapse
+        ul.nav.navbar-nav
+            li.active
+                a(href='/') Home
+            li
+                a(href='/about') About
+        if _auth.isAuth
+            ul.nav.navbar-nav.navbar-right
+                li.dropdown
+                    a.dropdown-toggle(href='#' data-toggle='dropdown')
+                        span=_auth.user.first_name
+                        b.caret
+                    ul.dropdown-menu
+                        li
+                            a(href='#')
+                                span.glyphicon.glyphicon-user
+                                span &nbsp; Account
+                        li
+                            a(href='javascript:void(0)' onclick="document.getElementById('logout_form').submit()")
+                                span.glyphicon.glyphicon-log-out
+                                span &nbsp;Logout
+                            form(id='logout_form' action='/logout' method='post' style='display:none')
+                                input(type='hidden' name='_csrf' value=_csrf)
+        else
+            ul.nav.navbar-nav.navbar-right
+                li.active
+                    a(href='/login') Login
+                li
+                    a(href='/register') Register
+
+        if _auth.isAuth
+            form.navbar-form.navbar-right(role='search')
+                .input-group
+                    input.form-control(type='text' name='q' placeholder='Search')
+                    span.input-group-btn
+                        button.btn.btn-primary(type='submit') Search
+
+    // /.navbar-collapse

@@ -1,0 +1,25 @@
+doctype html
+
+html(lang='en')
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(href="/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css")
+        link(href="/assets/css/main.css" rel="stylesheet" type="text/css")
+        block styles
+        title
+            block title
+        script(src="/assets/js/jquery.min.js")
+        script(src="/assets/js/script.js")
+    body
+        //- This mixim is used to show errors when doing form validation
+        mixin showError(errors, field)
+            if (errors && field)
+                each error in errors
+                    if error.param == field
+                        span.text-danger(style='margin-bottom:2px')=error.msg
+                        - break
+        block body-content
+        script(src="/assets/bootstrap/js/bootstrap.min.js")
+        block scripts

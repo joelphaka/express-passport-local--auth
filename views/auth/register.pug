@@ -1,0 +1,72 @@
+extends ../templates/layouts/default
+
+block title
+    | Create an account
+
+block content
+    .container-fluid#mainContainer
+        .row.margin-top-10
+            .col-md-8.col-sm-10.col-md-offset-2.col-sm-offset-1
+                h1 Create an account
+                h5.text-muted Fill in the form to complete your registration
+
+        .row
+            .col-md-8.col-sm-10.col-md-offset-2.col-sm-offset-1.margin-bottom-35
+                form(action='/register' method='post')
+                    .row
+                        .form-group.col-md-12
+                            label.text-danger * Required
+                    .row
+                        .form-group.col-md-6.col-sm-6
+                            label(for='first_name')
+                                span First name
+                                span.text-danger &nbsp;*
+                            input.form-control(type='text' name='first_name' id='first_name' placeholder='First name' value=old('first_name'))
+                            +showError(errors, 'first_name')
+                        .form-group.col-md-6.col-sm-6
+                            label(for='last_name')
+                                span Last name
+                                span.text-danger &nbsp;*
+                            input.form-control(type='text' name='last_name' id='last_name' placeholder='Last name' value=old('last_name'))
+                            +showError(errors, 'last_name')
+                    .row
+                        .form-group.col-md-12.col-sm-12
+                            label(for='email')
+                                span Email
+                                span.text-danger &nbsp;*
+                            input.form-control(type='email' name='email' id='email' placeholder='Email' value=old('email'))
+                            +showError(errors, 'email')
+                    .row
+                        .form-group.col-md-12.col-sm-12
+                            label(for='username')
+                                span Username
+                                span.text-danger &nbsp;*
+                            input.form-control(type='text' name='username' id='username' placeholder='Username' value=old('username'))
+                            +showError(errors, 'username')
+                    .row
+                        .form-group.col-md-12.col-sm-12
+                            label(for='password')
+                                span Password
+                                span.text-danger &nbsp;*
+                            input.form-control(type='password' name='password' id='password' placeholder='Password')
+                            +showError(errors, 'password')
+                    .row
+                        .form-group.col-md-12.col-sm-12
+                            label(for='password_confirmation')
+                                span Confirm password
+                                span.text-danger &nbsp;*
+                            input.form-control(type='password' name='password_confirmation' id='password_confirmation' placeholder='Confirm password')
+                            +showError(errors, 'password_confirmation')
+                    input(type='hidden' name='_csrf' value=_csrf)
+                    .row
+                        .col-md-12.col-sm-12.form-group.margin-top-10.margin-bottom-15
+                            label(for='accept_tcs')
+                                input.checkbox-inline(type='checkbox' name='accept_tcs' id='accept_tcs')
+                                span Accept terms and conditions.
+                            div.margin-bottom-5
+                                +showError(errors, 'accept_tcs')
+                            div By accepting the terms and condition you agree with abcde
+                    .row.margin-top-20
+                        .form-group.col-md-12.col-sm-12
+                            button.btn.btn-primary.btn-block(type='submit') Register
+

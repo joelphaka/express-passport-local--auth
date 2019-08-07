@@ -1,0 +1,44 @@
+{
+  "name": "express-passport-local-auth",
+  "version": "1.0.0",
+  "description": "This is a boilerplate for NodeJS Express using Passport Local Authentication.",
+  "main": "./bin/www.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Passport",
+    "Local",
+    "Express",
+    "Authentication"
+  ],
+  "author": "Joël Phaka",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "bluebird": "^3.5.5",
+    "body-parser": "^1.19.0",
+    "bookshelf": "^0.14.2",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.4",
+    "csurf": "^1.10.0",
+    "dotenv": "^7.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.1.5",
+    "express-flash": "0.0.2",
+    "express-flash-2": "^1.0.1",
+    "express-mysql-session": "^2.1.0",
+    "express-session": "^1.16.2",
+    "express-static": "^1.2.6",
+    "express-validator": "^5.3.1",
+    "knex": "^0.16.5",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "mysql": "^2.17.1",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "pug": "^2.0.4",
+    "querystring": "^0.2.0",
+    "serve-favicon": "^2.5.0"
+  }
+}

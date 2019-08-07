@@ -1,0 +1,32 @@
+extends ../templates/layouts/main
+
+block title
+    | Login
+
+block body-content
+    .container#mainContainer
+        form.row(action='/login' method='post' id='loginForm')
+            .form-content.col-xs-12
+                section.margin-top-25.margin-bottom-20
+                    h1.main-header.text-center.margin-top-15 Sign in
+                    .icon.center-block.margin-bottom-8
+                        .glyphicon.glyphicon-user
+                    .text-center.v-space-20 Sign in with your credentials
+                    if message
+                        .text-center.text-danger.margin-top-10.margin-bottom-5
+                            | #{message}
+                section
+                    .form-group
+                        input.form-control(type='text' name='email' id='email' placeholder='Email' value=old('email'))
+                    .form-group
+                        input.form-control(type='password' name='password' id='password' placeholder='Password')
+                    input(type='hidden' name='_csrf' value=_csrf)
+                    .form-group
+                        label(for='remember')
+                            input.checkbox-inline(type='checkbox' name='remember' id='remember' checked=old('remember'))
+                            span(style='font-weight:normal') Remember me
+                    .form-group
+                        button.btn.btn-primary.btn-block(type='submit') Sign in
+                    .text-center.margin-top-25
+                        span Don't have an account?&nbsp;
+                        a(href='/register') Create one

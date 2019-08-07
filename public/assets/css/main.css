@@ -1,0 +1,444 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    position: relative;
+}
+
+.container#mainContainer,
+ .container-fluid#mainContainer {
+     min-height: 100%;
+     position: relative;
+     padding-bottom: 50px;
+ }
+
+.navbar.navbar-fixed-top + .container#mainContainer,
+.navbar.navbar-fixed-top + .container-fluid#mainContainer {
+    margin-top: 71px;
+}
+
+.navbar.navbar-fixed-top + .container.edge#mainContainer,
+.navbar.navbar-fixed-top + .container-fluid.edge#mainContainer {
+    margin-top: 51px;
+}
+
+/*FLOAT CONTAINER*/
+.float-container > .float-left {
+    float: left;
+}
+
+.float-container > .float-right {
+    float: right;
+}
+
+.float-container:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/*FLEX CONTAINER*/
+.flex-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.flex-container.flex-row {
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.flex-container.flex-column {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.flex-container.flex-row.flex-center {
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.flex-container.flex-column.flex-center {
+    -ms-flex-align: center;
+    -webkit-align-content: center;
+    align-content: center;
+}
+
+.flex-container .content {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+/*PAGE FOOTER*/
+.page-footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 150px;
+    margin-top: 20px;
+
+    color: white;
+    background-color: #272829;
+}
+
+.page-footer > .copyright {
+    text-align: center;
+    display: block;
+}
+
+/*CHECKBOX INPUT*/
+.form-group > label > input[type="checkbox"].checkbox-inline {
+    margin-top: 0;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+.form-group > label > input[type="checkbox"].checkbox-inline + span {
+    vertical-align: middle;
+    margin-left: 7px;
+}
+
+/*FILE INPUT*/
+.file-chooser {
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.file-chooser > input[type=file] {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+/*SEARCH CONTROL*/
+
+.navbar .navbar-header .nav-search {
+    display: none;
+    position: absolute;
+    left: 15px;
+    right: 65px !important;
+    top: 8px;
+    height: 34px;
+    bottom: 10px;
+    margin: 0 !important;
+    padding: 0;
+    line-height: 0 !important;
+    width: auto;
+}
+
+.navbar .navbar-header .search-toggle {
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-right: 8px;
+    width: 44px;
+    height: 34px;
+    float: right;
+    background-color: transparent;
+    border: none;
+}
+
+.navbar.navbar-inverse .navbar-header .search-toggle {
+    color: white;
+}
+
+.navbar .navbar-header .search-toggle:hover {
+    background-color: #ddd;
+}
+
+.navbar.navbar-inverse .navbar-header .search-toggle:hover {
+    background-color: #333;
+}
+
+/*ERROR*/
+.error {
+    color: #a94442;
+}
+
+/*CENTERING*/
+.center-vertical {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.center-horizontal {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.center {
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.form-control,
+.form-group .form-control,
+.navbar,
+.navbar-toggle,
+.pagination,
+.pagination > li > a,
+.dropdown-menu,
+.panel,
+.well,
+.modal-content,
+.alert,
+.btn-group,
+.nav-tabs > li > a,
+.nav-pills > li > a,
+.nav-tabs.nav-justified > li > a,
+.nav-pills.nav-justified > li > a,
+.btn-group-vertical > .btn:last-child:not(:first-child),
+.btn-group-vertical > .btn:first-child:not(:last-child),
+.btn {
+    border-radius: 0 !important;
+}
+
+.btn > .glyphicon.btn-glyph {
+    line-height: inherit !important;
+}
+
+#loginForm > .form-content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 384px;
+    float: none !important;
+}
+
+#loginForm > .form-content h1.main-header, h2.main-header {
+    font-variant: small-caps;
+    /*padding-top: 25px;*/
+}
+
+.icon {
+    display: block;
+    width: 52px;
+    height: 52px;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 100%;
+}
+
+.icon > .glyphicon {
+    font-size: 28px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+
+.icon.sm-icon {
+    width: 34px;
+    height: 34px;
+}
+
+.icon.sm-icon > .glyphicon {
+    font-size: 18px;
+}
+
+.icon.xs-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.icon.xs-icon > .glyphicon {
+    font-size: 14px;
+}
+
+.node-logo {
+    width: 128px;
+    height: 128px;
+}
+
+.navbar .navbar-brand.brand-logo {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    display: block;
+}
+
+.navbar .navbar-brand.brand-logo > img.logo {
+    width: 36px;
+    height: 36px;
+}
+
+@media (max-width: 767px) {
+    .navbar .navbar-form {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar .navbar-header .search-toggle {
+        display: none;
+    }
+    .navbar .navbar-header .nav-search{
+        display: none !important;
+    }
+
+    .navbar-brand {
+        display: block;
+    }
+
+    .navbar.navbar-fixed-top {
+        padding-right: 15px;
+    }
+
+}
+
+@media (max-width: 640px) {
+    #loginForm > .form-content {
+        max-width: none;
+    }
+}
+
+@media (min-width: 640px) {
+    .node-logo {
+        width: 256px;
+        height: 256px;
+    }
+}
+
+/*POSITION*/
+*.position-relative { position: relative;}
+
+*.position-absolute { position: absolute;}
+
+*.position-fixed { position: fixed;}
+
+*.position-static { position: static;}
+
+/*MARGINS*/
+.margin-top-0 { margin-bottom: 0;}
+
+.margin-bottom-0 { margin-bottom: 0;}
+
+.margin-top-2 { margin-top: 2px;}
+
+.margin-bottom-2 { margin-bottom: 2px;}
+
+.margin-top-3 { margin-top: 3px;}
+
+.margin-bottom-3 { margin-bottom: 3px;}
+
+.margin-top-4 { margin-top: 4px;}
+
+.margin-bottom-4 { margin-bottom: 4px;}
+
+.margin-top-5 { margin-top: 5px;}
+
+.margin-bottom-5 { margin-bottom: 5px;}
+
+.margin-top-8 { margin-top: 8px;}
+
+.margin-bottom-8 { margin-bottom: 8px;}
+
+.margin-top-10 { margin-top: 10px;}
+
+.margin-bottom-10 { margin-bottom: 10px;}
+
+.margin-top-15 { margin-top: 15px;}
+
+.margin-bottom-15 { margin-bottom: 15px;}
+
+.margin-top-20 { margin-top: 20px;}
+
+.margin-bottom-20 { margin-bottom: 20px;}
+
+.margin-top-25 { margin-top: 25px;}
+
+.margin-bottom-25 { margin-bottom: 25px;}
+
+.margin-top-30 { margin-top: 30px;}
+
+.margin-bottom-30 { margin-bottom: 30px;}
+
+.margin-top-35 { margin-top: 35px;}
+
+.margin-bottom-35 { margin-bottom: 35px;}
+
+.margin-top-40 { margin-top: 40px;}
+
+.margin-bottom-40 { margin-bottom: 40px;}
+
+.margin-top-45 { margin-top: 45px;}
+
+.margin-bottom-45 { margin-bottom: 45px;}
+
+.margin-top-50 { margin-top: 50px;}
+
+.margin-bottom-50 { margin-bottom: 50px;}
+
+.margin-top-55 { margin-top: 55px;}
+
+.margin-bottom-55 { margin-bottom: 55px;}
+
+.margin-top-60 { margin-top: 60px;}
+
+.margin-bottom-60 { margin-bottom: 60px;}
+
+/*PADDING*/
+.padding-0 { padding: 0;}
+
+.padding-5 { padding: 5px;}
+
+.padding-10 { padding: 10px;}
+
+.padding-15 { padding: 15px;}
+
+.padding-20 { padding: 20px;}
+
+.padding-25 { padding: 25px;}
+
+.padding-30 { padding: 30px;}
+
+/*FIXED*/
+.fixed-right-0 { right: 0;}
+
+.fixed-right-5 { right: 5px;}
+
+.fixed-right-10 { right: 10px;}
+
+.fixed-right-15 { right: 15px;}
+
+.fixed-right-20 { right: 20px;}
+
+.fixed-right-25 { right: 25px;}
+
+.fixed-right-30 { right: 30px;}
+
+.fixed-left-0 { left: 0;}
+
+.fixed-left-5 { left: 5px;}
+
+.fixed-left-10 { left: 10px;}
+
+.fixed-left-15 { left: 15px;}
+
+.fixed-left-20 { left: 20px;}
+
+.fixed-left-25 { left: 25px;}
+
+.fixed-left-30 { left: 30px;}
