@@ -43,13 +43,13 @@ User.validateRegistration = (req) => {
 
     req.checkBody('first_name')
         .notEmpty().withMessage(validation.MESSAGES.REQUIRED)
-        .notWhitespace().withMessage(validation.MESSAGES.EMPTY);
-        //.isName().withMessage(validation.MESSAGES.NAME);
+        .notWhitespace().withMessage(validation.MESSAGES.EMPTY)
+        .isName().withMessage(validation.MESSAGES.NAME);
 
     req.checkBody('last_name')
         .notEmpty().withMessage(validation.MESSAGES.REQUIRED)
-        .notWhitespace().withMessage(validation.MESSAGES.EMPTY);
-        //.isName().withMessage(validation.MESSAGES.NAME);
+        .notWhitespace().withMessage(validation.MESSAGES.EMPTY)
+        .isName().withMessage(validation.MESSAGES.NAME);
 
     return req.getValidationResult();
 };
