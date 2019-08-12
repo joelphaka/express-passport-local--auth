@@ -1,9 +1,9 @@
 const express           = require('express');
 const router            = express.Router();
-const middlware         = require('../lib/middleware');
+const middleware         = require('../lib/middleware');
 const AuthController    = require('../controllers/auth.controller');
 
-router.get('/login', middlware.redirectToIfAuth(), AuthController.login.get);
+router.get('/login', middleware.redirectToIfAuth(), AuthController.login.get);
 
 router.post('/login', AuthController.login.post);
 
