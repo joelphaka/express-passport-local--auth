@@ -12,7 +12,7 @@ const cookieParser      = require('cookie-parser');
 const bodyParser        = require('body-parser');
 const path              = require('path');
 
-const routes            = require('./routes/routes.index');
+const routes            = require('./routes');
 const middleware        = require('./lib/middleware');
 const authenticator     = require('./lib/authenticator');
 
