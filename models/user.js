@@ -15,7 +15,7 @@ User.comparePassword = (password, hash) => {
     return bcrypt.compareSync(password, hash);
 };
 
-User.validateRegistation = (req) => {
+User.validateRegistration = (req) => {
 
     req.checkBody('email')
         .notEmpty().withMessage(validation.MESSAGES.REQUIRED)

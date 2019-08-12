@@ -33,7 +33,7 @@ exports.register = {
         res.render('auth/register')
     },
     post(req, res, next) {
-        User.validateRegistation(req)
+        User.validateRegistration(req)
             .then((errors) => {
                 if (errors.isEmpty()) {
                     return Promise.resolve(true);
