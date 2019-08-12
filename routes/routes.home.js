@@ -1,6 +1,6 @@
 const express           = require('express');
 const router            = express.Router();
-const middlware         = require('../lib/middleware');
+const middleware         = require('../lib/middleware');
 const HomeController    = require('../controllers/home.controller');
 
 router.get('/', HomeController.index);
