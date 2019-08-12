@@ -47,10 +47,10 @@ exports.register = {
             .then(() => {
                 return User
                     .forge({
-                        email: req.body.email,
-                        username: req.body.username,
-                        first_name: req.body.first_name,
-                        last_name: req.body.last_name,
+                        email: req.body.email.trim(),
+                        username: req.body.username.trim(),
+                        first_name: req.body.first_name.trim(),
+                        last_name: req.body.last_name.trim(),
                         password: User.hashPassword(req.body.password)
                     })
                     .save()
