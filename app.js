@@ -50,7 +50,7 @@ passport.use('local', new LocalStrategy(authenticator.settings, authenticator.au
 passport.serializeUser(authenticator.serializeUser());
 passport.deserializeUser(authenticator.deserializeUser());
 
-// Custom middlewares
+// Custom middleware
 app.use(middleware.csrfInView());
 app.use(middleware.csrfAsFuncInView());
 app.use(middleware.requestInView());
